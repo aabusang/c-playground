@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+
+int main(void)
+{
+    int vector[] = {1, 2, 3, 4, 5};
+    int *pv = vector;
+
+    /*the data can be retrieved using either 
+     *pv or vector but the size of pv is a size 
+     *of a pointer while the size of  vector is 20 or 5 ints * 4bytes
+     ****************/
+    printf("size of pv: %lu\n", sizeof(pv));
+    printf("size of vector: %lu\n", sizeof(vector));
+}
+
+
