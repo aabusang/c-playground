@@ -1,4 +1,4 @@
-#include "functions.h"
+#include "header.h"
 
 int add (int number1, int number2)
 {

@@ -6,4 +6,4 @@ main.o: main.c
 functions.o: functions.c
 	gcc -c functions.c
 clean:
-	rm *.o main
+	rm *.o *~ main

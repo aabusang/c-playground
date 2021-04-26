@@ -1,14 +1,11 @@
 #include <stdio.h>
 
-#include "functions.h"
+#include "header.h"
 
 int main(void)
 {
     /* use function */
-    printf("Function: %d\n", add(2, 6));
-
-    /* use macro */
-    printf("Macro: %d\n", (ADD(2, 6)));
+    printf("Function: (2 + 6) = %d\n", add(2, 6));
 
     /* use typedef */
     person adam;

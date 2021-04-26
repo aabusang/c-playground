@@ -38,7 +38,7 @@ char *getLine()
     while(1)
     {
 	character = fgetc(stdin);
-	if (character == '\n')
+	if (character == EOF)
 	{
 	    break;
 	}
@@ -58,7 +58,7 @@ char *getLine()
 	 //both buffer and currentPosition points to the same memory location
 	*currentPosition++ = character;
     }
-    *currentPosition = '\n';
+    
     printf("offset: %d\n", offset);
     return buffer;
 }
