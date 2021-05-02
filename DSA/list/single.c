@@ -25,8 +25,12 @@ int main(void)
     /* deleteNodeAtEnd(); */
     /* deleteNode(3); */
     printList();
-    reverse();
+    /* reverse(); */
+    printf("Recursively reversed\n");
+    recursiveReverse(head);
     printList();
+    printf("\nReverse print: ");
+    reversePrint(head);
     /* design to take user input dynamically */
     /* do */
     /* { */

@@ -4,8 +4,12 @@
 #include <string.h>
 #include <time.h>
 
-void bubbleSort(int arr[], int size);
+void bsort1(int arr[], int size);
+void bsort2(int arr[], int size);
+
+
 void bsort(void *arr, int size);
+
 
 int main(void)
 {
@@ -19,7 +23,8 @@ int main(void)
 	printf("%d ", numbers[i]);
     }
     
-    bubbleSort(numbers, size);
+    /* bsort1(numbers, size); */
+    bsort2(numbers, size);
     /* bsort(numbers, size); */
     
     printf("\nAfter:   ");
@@ -33,6 +38,45 @@ int main(void)
     return 0;
 }
 
+
+void bsort1(int arr[], int size)
+{
+    int i, j, tmp;
+    for (i = 0; i < size; i++)
+    {
+	for (j = 0; j < size - 1; j++)
+	{
+	    if (arr[j] > arr[j+1])
+	    {
+		tmp = arr[j];
+		arr[j] = arr[j+1];
+		arr[j+1] = tmp;
+	    }
+	}
+    }
+    
+    return;
+}
+
+void bsort2(int arr[], int size)
+{
+    int i, j, tmp;
+    for (i = 0; i < size; i++)
+    {
+	for (j = 0; j < size - 1; j++)
+	{
+	    if (arr[i] < arr[j])
+	    {
+		tmp = arr[i];
+		arr[i] = arr[j];
+		arr[j] = tmp;
+	    }
+	}
+    }
+    return;
+}
+
+/* dynamic bubble sort function to sort any data */
 void bsort(void *arr, int size)
 {
     int i, j;
@@ -53,23 +97,4 @@ void bsort(void *arr, int size)
 	    }
 	}
     }    
-}
-
-void bubbleSort(int arr[], int size)
-{
-    int i, j, tmp;
-    for (i = 0; i < size; i++)
-    {
-	for (j = 0; j < size - 1; j++)
-	{
-	    if (arr[j] > arr[j+1])
-	    {
-		tmp = arr[j];
-		arr[j] = arr[j+1];
-		arr[j+1] = tmp;
-	    }
-	}
-    }
-    
-    return;
 }

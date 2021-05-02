@@ -1,0 +1,4 @@
+Hello world of C
+How are you doing
+I am coming in now
+Are you ready to code?

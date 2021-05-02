@@ -21,8 +21,12 @@ void deleteNodeAtStart();
 void deleteNodeAtEnd();
 void deleteNode(int position);
 
-/* other */
+/* reverse */
+void recursiveReverse(node *list); 
+void reversePrint(node *list);
 void reverse();
+
+/* other */
 int len();
 void printList();
 void prompt();

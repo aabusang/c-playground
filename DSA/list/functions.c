@@ -172,6 +172,39 @@ void reverse()
 
     printf("List reversed\n");
 }
+void reversePrint(node *list)
+{
+    node *tmp = list;
+    if (tmp == NULL)
+    {
+	printf("\n");
+	return;
+    }
+    {
+	reversePrint(tmp->next);
+	printf("%d ", tmp->data);
+    }
+}
+
+
+void recursiveReverse(node *p)
+{
+    if (p->next == NULL)
+    {
+	head = p;
+	return;
+    }
+    else
+    {
+	recursiveReverse(p->next);
+
+	/* prev = current->next; */
+	/* prev->next = current; */
+	p->next->next = p;
+	p->next = NULL;
+    }
+
+}
 
 void prompt()
 {
